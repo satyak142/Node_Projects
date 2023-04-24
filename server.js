@@ -27,6 +27,26 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(cors());
 
+// routes
+app.get('/',(req,res) =>{
+    try{
+        res.render('index.ejs')
+    }
+    catch(err){
+        res.status(500).send(err.message)
+    }
+
+})
+app.post('/',(req,res) => {
+
+})
+app.put('/',(req,res) => {
+
+})
+app.delete('/',(req,res) => {
+
+})
+
 
 
 // port
